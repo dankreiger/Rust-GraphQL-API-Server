@@ -1,8 +1,8 @@
-# Rust GQL Server
+## Rust GQL Server
 
-## Start with debug log level
-
+### Start server
 
 ```sh
+# with debug log level
 RUST_LOG=debug cargo run
 ```
