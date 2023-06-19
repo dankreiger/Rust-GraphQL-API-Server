@@ -29,15 +29,16 @@ checksum = "71938f30533e4d95a6d17aa530939da3842c2ab6f4f84b9dae68447e4129f74a"
 
 [[package]]
 name = "async-graphql"
-version = "4.0.4"
+version = "4.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ffffea596a12b6d9ea5c6fc8a5f414cf4e0c8cd6b618ac2c3d4f56d9b5c5520b"
+checksum = "d9ed522678d412d77effe47b3c82314ac36952a35e6e852093dd48287c421f80"
 dependencies = [
  "async-graphql-derive",
  "async-graphql-parser",
  "async-graphql-value",
  "async-stream",
  "async-trait",
+ "base64",
  "bytes",
  "fast_chemail",
  "fnv",
@@ -52,6 +53,7 @@ dependencies = [
  "regex",
  "serde",
  "serde_json",
+ "serde_urlencoded",
  "static_assertions",
  "tempfile",
  "thiserror",
@@ -59,9 +61,9 @@ dependencies = [
 
 [[package]]
 name = "async-graphql-derive"
-version = "4.0.4"
+version = "4.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7082221cc1dc29edec0e3225420146b1fbc7f18ba534e301eab186501ae84c28"
+checksum = "c121a894495d7d3fc3d4e15e0a9843e422e4d1d9e3c514d8062a1c94b35b005d"
 dependencies = [
  "Inflector",
  "async-graphql-parser",
@@ -75,9 +77,9 @@ dependencies = [
 
 [[package]]
 name = "async-graphql-parser"
-version = "4.0.4"
+version = "4.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c328e2cb0dade64333859f7a7e22c9e19a3767afaad673976a1d855c9bda5ffa"
+checksum = "6b6c386f398145c6180206c1869c2279f5a3d45db5be4e0266148c6ac5c6ad68"
 dependencies = [
  "async-graphql-value",
  "pest",
@@ -87,9 +89,9 @@ dependencies = [
 
 [[package]]
 name = "async-graphql-value"
-version = "4.0.4"
+version = "4.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "005292494ce718604a0dc1531e5827fe540761e1df44b064085711c5fde70b7c"
+checksum = "7a941b499fead4a3fb5392cabf42446566d18c86313f69f2deab69560394d65f"
 dependencies = [
  "bytes",
  "indexmap",
@@ -99,9 +101,9 @@ dependencies = [
 
 [[package]]
 name = "async-graphql-warp"
-version = "4.0.4"
+version = "4.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f482be9535b0ce02024717a1d0ace1021c88d5f9ef3e32a88f5458adecaee363"
+checksum = "c512820fb4259389aa5af696cb78297ef93d8d0f25f62007705de1aa7343253b"
 dependencies = [
  "async-graphql",
  "futures-util",
@@ -770,10 +772,11 @@ checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
 
 [[package]]
 name = "pest"
-version = "2.1.3"
+version = "2.5.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10f4872ae94d7b90ae48754df22fd42ad52ce740b8f370b03da4835417403e53"
+checksum = "8cbd939b234e95d72bc393d51788aec68aeeb5d51e748ca08ff3aad58cb722f7"
 dependencies = [
+ "thiserror",
  "ucd-trie",
 ]
 
@@ -1100,18 +1103,18 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.31"
+version = "1.0.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bd829fe32373d27f76265620b5309d0340cb8550f523c1dda251d6298069069a"
+checksum = "a5ab016db510546d856297882807df8da66a16fb8c4101cb8b30054b0d5b2d9c"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.31"
+version = "1.0.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0396bc89e626244658bef819e22d0cc459e795a5ebe878e6ec336d1674a8d79a"
+checksum = "5420d42e90af0c38c3290abcca25b9b3bdf379fc9f55c528f53a269d9c9a267e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1294,9 +1297,9 @@ checksum = "dcf81ac59edc17cc8697ff311e8f5ef2d99fcbd9817b34cec66f90b6c3dfd987"
 
 [[package]]
 name = "ucd-trie"
-version = "0.1.3"
+version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "56dee185309b50d1f11bfedef0fe6d036842e3fb77413abef29f8f8d1c5d4c1c"
+checksum = "9e79c4d996edb816c91e4308506774452e55e95c3c9de07b6729e17e15a5ef81"
 
 [[package]]
 name = "unicase"
